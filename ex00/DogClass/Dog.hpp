@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 21:18:53 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/26 21:31:13 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/27 15:46:11 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@
 
 class Dog : public Animal
 {
-    public:
-        Dog();
-        Dog(const Dog &copy);
-        Dog &operator=(const Dog &other);
-        ~Dog();
+	public:
+		Dog();
+		Dog(const Dog &copy);
+		Dog &operator=(const Dog &other);
+		~Dog();
 
-        void makeSound() const;
+		void makeSound() const;
 };
 
 #endif

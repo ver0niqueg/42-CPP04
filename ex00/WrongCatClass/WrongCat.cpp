@@ -1,45 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/26 21:49:11 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/27 15:45:45 by vgalmich         ###   ########.fr       */
+/*   Created: 2025/08/27 14:47:53 by vgalmich          #+#    #+#             */
+/*   Updated: 2025/08/27 15:46:28 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "WrongCat.hpp"
 
-Cat::Cat()
+WrongCat::WrongCat()
 {
-	type = "Cat";
-	std::cout << "A cat just came to explore !" << std::endl;
+	type = "WrongCat";
+	std::cout << "A wrong cat just came out of nowhere !" << std::endl;
 }
 
-Cat::Cat(const Cat &copy) : Animal(copy)
+WrongCat::WrongCat(const WrongCat &copy)
 {
 	type = copy.type;
-	std::cout << "The cat just cloned itself !" << std::endl;
+	std::cout << "Another exact same wrong cat appeared." << std::endl;
 }
 
-Cat& Cat::operator=(const Cat &other)
+WrongCat& WrongCat::operator=(const WrongCat &other)
 {
 	if (this != &other)
-	{
-		Animal::operator=(other);
-		type = other.type;
-	}
+		this->type = other.type;
 	return (*this);
 }
 
-Cat::~Cat()
+WrongCat::~WrongCat()
 {
-	std::cout << "The cat has gone." << std::endl;
-}
-
-void Cat::makeSound() const
-{
-	std::cout << "* Meowww ! Moewww ! *" << std::endl;    
+	std::cout << "A wrong cat just vanished." << std::endl;
 }
