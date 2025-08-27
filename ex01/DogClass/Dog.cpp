@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 21:35:52 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/27 19:22:50 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/27 19:23:56 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ Dog& Dog::operator=(const Dog &other)
 
 Dog::~Dog()
 {
+	delete brain;
 	std::cout << "The dog just left." << std::endl;
 }
 
