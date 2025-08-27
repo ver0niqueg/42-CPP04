@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 21:18:53 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/27 16:34:20 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/27 17:28:32 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class Dog : public Animal
 {
 	private:
 		Brain* brain;
+		
 	public:
 		Dog();
 		Dog(const Dog &copy);

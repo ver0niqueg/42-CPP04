@@ -18,8 +18,7 @@ SRCS = main.cpp \
 		AnimalClass/Animal.cpp \
 		DogClass/Dog.cpp \
 		CatClass/Cat.cpp \
-		WrongAnimalClass/WrongAnimal.cpp \
-		WrongCatClass/WrongCat.cpp \
+		BrainClass/Brain.cpp \
 
 # Object files inside obj/
 OBJS = $(SRCS:%.cpp=$(OBJDIR)/%.o)
