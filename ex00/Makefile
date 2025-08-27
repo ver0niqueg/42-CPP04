@@ -43,13 +43,21 @@ $(OBJDIR)/%.o: %.cpp
 
 # Clean object files
 clean:
-	@rm -rf $(OBJDIR)
-	@echo "$(BLUE)Deleting all objects from /ex00...$(RESET)"
+	@if [ -d "$(OBJDIR)" ]; then \
+		rm -rf $(OBJDIR); \
+		echo "$(BLUE)Deleting all objects from /ex00...$(RESET)"; \
+	else \
+		echo "No objects to remove from /ex00."; \
+	fi
 
 # Full clean
 fclean: clean
-	@rm -f $(NAME)
-	@echo "$(BLUE)Deleting $(NAME) from ex00...$(RESET)"
+	@if [ -f "$(NAME)" ]; then \
+		rm -f $(NAME); \
+		echo "$(BLUE)Deleting $(NAME) from ex00...$(RESET)"; \
+	else \
+		echo "No Executable to remove from ex00."; \
+	fi
 
 # Rebuild
 re: fclean all
