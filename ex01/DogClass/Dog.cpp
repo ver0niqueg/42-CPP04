@@ -6,13 +6,13 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 21:35:52 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/27 17:35:35 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/27 19:22:50 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog()
+Dog::Dog() : Animal()
 {
 	type = "Dog";
 	std::cout << "A dog just appeared !" << std::endl;
@@ -21,6 +21,7 @@ Dog::Dog()
 Dog::Dog(const Dog &copy) : Animal(copy)
 {
 	type = copy.type;
+	brain = new Brain(*copy.brain); // deep copy
 	std::cout << "A twin of the dog just appeared !" << std::endl;
 }
 
@@ -30,6 +31,9 @@ Dog& Dog::operator=(const Dog &other)
 	{
 		Animal::operator=(other);
 		type = other.type;
+		if (brain)
+			delete brain;
+		brain = new Brain(*other.brain);
 	}
 	return (*this);
 }

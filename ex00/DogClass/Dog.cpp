@@ -6,13 +6,13 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 21:35:52 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/27 15:46:01 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/27 17:45:10 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog()
+Dog::Dog() : Animal()
 {
 	type = "Dog";
 	std::cout << "A dog just appeared !" << std::endl;

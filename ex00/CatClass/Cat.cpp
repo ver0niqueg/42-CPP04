@@ -6,13 +6,13 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 21:49:11 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/27 15:45:45 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/27 17:45:21 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat()
+Cat::Cat() : Animal()
 {
 	type = "Cat";
 	std::cout << "A cat just came to explore !" << std::endl;
