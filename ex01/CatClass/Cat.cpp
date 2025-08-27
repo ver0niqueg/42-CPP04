@@ -6,11 +6,12 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 21:49:11 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/27 19:22:56 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/27 19:35:34 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
+#include "../BrainClass/Brain.hpp"
 
 Cat::Cat() : Animal()
 {

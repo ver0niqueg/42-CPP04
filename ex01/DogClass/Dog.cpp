@@ -6,15 +6,17 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 21:35:52 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/27 19:23:56 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/27 19:44:15 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
+#include "../BrainClass/Brain.hpp"
 
 Dog::Dog() : Animal()
 {
 	type = "Dog";
+	brain = new Brain(); // allouer Brain
 	std::cout << "A dog just appeared !" << std::endl;
 }
 
