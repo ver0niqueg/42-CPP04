@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 17:22:39 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/28 17:26:29 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/28 18:26:50 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,5 @@ AMateria *Cure::clone() const
 
 void Cure::use(ICharacter &target)
 {
-    std::cout << "* A soothing light heals " << target.getName() << "! *" << std::endl;
+    std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }
