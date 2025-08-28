@@ -6,14 +6,14 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 21:32:25 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/28 14:51:18 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/28 15:05:29 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CAT_HPP
 # define CAT_HPP
 
-#include "../AnimalClass/Animal.hpp"
+#include "../AAnimalClass/AAnimal.hpp"
 #include "../BrainClass/Brain.hpp"
 
 class Cat : public AAnimal
