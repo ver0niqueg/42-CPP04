@@ -6,12 +6,12 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 15:40:26 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/28 16:00:43 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/28 18:39:03 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
-#include "../ICharacterClass/ICharacter.hpp"
+#include "../CharacterClass/ICharacter.hpp"
 
 AMateria::AMateria(std::string const &type) : _type(type)
 {

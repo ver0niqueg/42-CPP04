@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 17:06:31 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/28 17:22:18 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/28 18:39:08 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #define CURE_HPP
 
 #include "AMateria.hpp"
-#include "../ICharacterClass/ICharacter.hpp"
+#include "../CharacterClass/ICharacter.hpp"
 
 class Cure : public AMateria
 {

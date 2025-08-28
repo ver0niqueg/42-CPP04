@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 16:20:23 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/28 16:56:29 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/28 18:39:12 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #define ICE_HPP
 
 #include "AMateria.hpp"
-#include "../ICharacterClass/ICharacter.hpp"
+#include "../CharacterClass/ICharacter.hpp"
 
 class Ice : public AMateria
 {
