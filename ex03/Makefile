@@ -1,5 +1,5 @@
 # Program name
-NAME = Animal
+NAME = Material
 
 # Compiler and flags
 CC = c++
@@ -15,17 +15,18 @@ BLUE   = \033[34m
 
 # Source files
 SRCS = main.cpp \
-		AnimalClass/Animal.cpp \
-		DogClass/Dog.cpp \
-		CatClass/Cat.cpp \
-		BrainClass/Brain.cpp \
+		AMateriaClass/AMateria.cpp \
+		AMateriaClass/MateriaSource.cpp \
+		CharacterClass/Character.cpp \
+		CureClass/Cure.cpp \
+		IceClass/Ice.cpp \
 
 # Object files inside obj/
 OBJS = $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
 # Default target
 all: $(NAME)
-	@printf "$(BLUE)Welcome to EX02 of CPP04\n$(RESET)"
+	@printf "$(BLUE)Welcome to EX03 of CPP04\n$(RESET)"
 
 # Link step
 $(NAME): $(OBJS)
@@ -44,18 +45,18 @@ $(OBJDIR)/%.o: %.cpp
 clean:
 	@if [ -d "$(OBJDIR)" ]; then \
 		rm -rf $(OBJDIR); \
-		echo "$(BLUE)Deleting all objects from /ex02...$(RESET)"; \
+		echo "$(BLUE)Deleting all objects from /ex03...$(RESET)"; \
 	else \
-		echo "No objects to remove from /ex02."; \
+		echo "No objects to remove from /ex03."; \
 	fi
 
 # Full clean
 fclean: clean
 	@if [ -f "$(NAME)" ]; then \
 		rm -f $(NAME); \
-		echo "$(BLUE)Deleting $(NAME) from ex02...$(RESET)"; \
+		echo "$(BLUE)Deleting $(NAME) from ex03...$(RESET)"; \
 	else \
-		echo "No Executable to remove from ex02."; \
+		echo "No Executable to remove from ex03."; \
 	fi
 
 # Rebuild

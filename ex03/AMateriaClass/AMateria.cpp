@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 15:40:26 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/28 18:39:03 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/29 15:07:36 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,5 @@ std::string const &AMateria::getType() const
 // fonction qui represente l'action de la Materia su un personnage (ICharacter)
 void AMateria::use(ICharacter &target)
 {
+    (void)target;
 }

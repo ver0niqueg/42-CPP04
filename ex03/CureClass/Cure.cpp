@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 17:22:39 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/28 18:26:50 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/29 15:09:49 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Cure &Cure::operator=(const Cure &other)
 
 Cure::~Cure()
 {
-    std::cout << _type << " has been vasnished." << std::endl;
+    std::cout << _type << " has been vanished." << std::endl;
 }
 
 AMateria *Cure::clone() const

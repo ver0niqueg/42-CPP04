@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 15:12:19 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/28 16:00:19 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/29 14:56:58 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 #define AMATERIA_HPP
 
 #include <iostream>
+
+#define CYAN "\033[36m"
+#define RST "\033[0m"
 
 class ICharacter; // forward declaration
 
