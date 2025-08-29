@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 17:22:39 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/29 15:09:49 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/29 16:12:12 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 Cure::Cure() : AMateria("cure")
 {
-    std::cout << _type << " has been generated successfully !" << std::endl;
+    std::cout << _type << " has been generated successfully!" << std::endl;
 }
 
 Cure::Cure(const Cure &copy) : AMateria(copy)
 {
-    std::cout << "A copy of " << _type << " has been generated successfully !" << std::endl;
+    std::cout << "A copy of " << _type << " has been generated successfully!" << std::endl;
 }
 
 Cure &Cure::operator=(const Cure &other)

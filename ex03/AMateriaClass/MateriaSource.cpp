@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 14:18:07 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/29 14:46:43 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/29 16:31:25 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ MateriaSource::MateriaSource()
 {
     for (int i = 0; i < 4; i++)
         _storage[i] = NULL;
-    std::cout << "MateriaSource generated." << std::endl;
+    std::cout << "MateriaSource is ready to teach new Materias!" << std::endl;
 }
 
 MateriaSource::MateriaSource(const MateriaSource &copy)
@@ -60,7 +60,7 @@ MateriaSource::~MateriaSource()
         delete _storage[i];
         _storage[i] = NULL;
     }
-    std::cout << "MateriaSource is destroyed." << std::endl;
+    std::cout << "MateriaSource has been dismantled." << std::endl;
 }
 
 void MateriaSource::learnMateria(AMateria *m)
@@ -71,11 +71,12 @@ void MateriaSource::learnMateria(AMateria *m)
     {
         if (_storage[i] == NULL)
         {
-            _storage[i] = m->clone();
-            std::cout << "Materia learned in slot " << i << std::endl;
+            _storage[i] = m;
+            std::cout << _storage[i]->getType() << " Materia has been mastered and stored in slot " << i << "!" << std::endl;
             return;
         }
     }
+    delete m;
     std::cout << "MateriaSource is full, cannot learn more." << std::endl;
 }
 

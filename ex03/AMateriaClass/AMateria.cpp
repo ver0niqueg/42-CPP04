@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 15:40:26 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/29 15:07:36 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/29 16:07:24 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 AMateria::AMateria(std::string const &type) : _type(type)
 {
-    std::cout << "AMateria constructor has been called." << std::endl;
+    std::cout << _type << " Materia has appeared in the realm!" << std::endl;
 }
 
 AMateria::AMateria(const AMateria &copy) : _type(copy._type)
