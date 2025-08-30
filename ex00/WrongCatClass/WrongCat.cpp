@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 14:47:53 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/27 15:46:28 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/30 14:35:37 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,9 @@ WrongCat& WrongCat::operator=(const WrongCat &other)
 WrongCat::~WrongCat()
 {
 	std::cout << "A wrong cat just vanished." << std::endl;
+}
+
+void WrongCat::makeSound() const 
+{
+	std::cout << type << "* Meuuuuuuuh * What?!" << std::endl;
 }
