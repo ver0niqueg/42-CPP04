@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 14:18:07 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/30 13:55:36 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/30 18:05:32 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,11 @@ MateriaSource &MateriaSource::operator=(const MateriaSource &other)
 {
 	if (this != &other)
 	{
-		// supprimer l'ancien storage
 		for (int i = 0; i < 4; i++)
 		{
 			delete _storage[i];
 			_storage[i] = NULL;
 		}
-		// deep copy
 		for (int i = 0; i < 4; i++)
 		{
 			if (other._storage[i])

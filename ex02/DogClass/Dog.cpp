@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 21:35:52 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/30 17:11:55 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/30 18:07:01 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@
 Dog::Dog() : AAnimal()
 {
 	type = "Dog";
-	brain = new Brain(); // allouer Brain
+	brain = new Brain();
 	std::cout << "A dog just appeared !" << std::endl;
 }
 
 Dog::Dog(const Dog &copy) : AAnimal(copy)
 {
 	type = copy.type;
-	brain = new Brain(*copy.brain); // deep copy
+	brain = new Brain(*copy.brain);
 	std::cout << "A twin of the dog just appeared !" << std::endl;
 }
 

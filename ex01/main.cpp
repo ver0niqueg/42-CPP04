@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 17:09:57 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/30 17:29:34 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/30 18:07:42 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 int main() 
 {
-    // Création simple d'animaux
     const Animal* j = new Dog();
     const Animal* i = new Cat();
 
@@ -45,7 +44,7 @@ int main()
     std::cout << CYAN << "\n=== Test Brain deep copy with Dog ===" << RST << std::endl;
     Dog* dog1 = new Dog();
     dog1->getBrain()->setIdea(0, "Eat bones");
-    Dog dog2(*dog1); // deep copy
+    Dog dog2(*dog1);
     dog2.getBrain()->setIdea(0, "Chase cats");
 
     std::cout << "dog1 idea[0]: " << dog1->getBrain()->getIdea(0) << std::endl;
@@ -58,7 +57,7 @@ int main()
     dogA->getBrain()->setIdea(1, "Sleep");
     dogA->getBrain()->setIdea(2, "Play fetch");
 
-    Dog dogB(*dogA); // deep copy
+    Dog dogB(*dogA);
 	dogB.getBrain()->setIdea(0, "Take a nap");
     dogB.getBrain()->setIdea(1, "Chase cats");
 

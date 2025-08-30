@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 14:08:21 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/30 13:55:39 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/30 18:05:37 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,6 @@
 
 #include "AMateria.hpp"
 #include "IMateriaSource.hpp"
-
-/* Cette classe doit pouvoir apprendre des Materias et ensuite
-creer de nouvelles via clone() */
 
 class MateriaSource : public IMateriaSource
 {

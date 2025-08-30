@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 14:05:29 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/29 14:06:50 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/30 18:05:25 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <iostream>
 
-class AMateria; // forward declaration
+class AMateria;
 
 class IMateriaSource
 {

@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 16:37:46 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/28 13:58:13 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/30 18:06:47 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ Brain::~Brain()
 
 const std::string &Brain::getIdea(int index) const
 {
-	static std::string empty = ""; // valeur de retour si index hors limites
+	static std::string empty = "";
 	if (index < 0 || index >= 100) 
 	{
 		std::cout << "Brain: index is out of range" << std::endl;

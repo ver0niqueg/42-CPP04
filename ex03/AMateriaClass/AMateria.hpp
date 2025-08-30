@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 15:12:19 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/30 13:55:29 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/30 18:05:20 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #define CYAN "\033[36m"
 #define RST "\033[0m"
 
-class ICharacter; // forward declaration
+class ICharacter;
 
 class AMateria
 {
@@ -31,7 +31,7 @@ class AMateria
 		AMateria &operator=(const AMateria &other);
 		virtual ~AMateria();
 		
-		std::string const &getType() const; //Returns the materia type
+		std::string const &getType() const;
 		
 		virtual AMateria* clone() const = 0;
 		virtual void use(ICharacter &target);

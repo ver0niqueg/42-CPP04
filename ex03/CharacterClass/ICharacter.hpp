@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 15:43:23 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/30 13:55:47 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/30 18:05:48 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <string>
 
-class AMateria; // forward declaration
+class AMateria;
 
 class ICharacter
 {

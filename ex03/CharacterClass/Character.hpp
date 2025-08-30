@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 18:46:07 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/30 13:55:44 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/30 18:05:44 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class Character : public ICharacter
 		std::string _name;
 		AMateria* _inventory[4];
 
-		// Poubelle pour stocker les materias unequip()
 		AMateria*   _trash[50];
 		int         _trashCount;
 		

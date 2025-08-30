@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 14:53:12 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/30 13:56:01 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/30 18:06:28 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main()
 	src->learnMateria(new Cure());
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
-	src->learnMateria(new Ice()); // ignored, inventory full
+	src->learnMateria(new Ice());
 
 	std::cout << CYAN << "\n=== Creating Characters ===" << RST << std::endl;
 	Character* jade = new Character("jade");
@@ -40,29 +40,28 @@ int main()
 	tmp = src->createMateria("cure");
 	jade->equip(tmp);
 
-	tmp = src->createMateria("fire"); // unknown type, returns nullptr
-	jade->equip(tmp); // does nothing
+	tmp = src->createMateria("fire");
+	jade->equip(tmp);
 
 	tmp = src->createMateria("cure");
 	alice->equip(tmp);
 
 	std::cout << CYAN << "\n=== Using Materias ===" << RST << std::endl;
-	jade->use(0, *bob);  // Ice
-	jade->use(1, *bob);  // Cure
-	jade->use(2, *bob);  // nullptr, does nothing
+	jade->use(0, *bob);
+	jade->use(1, *bob);
+	jade->use(2, *bob);
 
-	alice->use(0, *bob); // Cure
+	alice->use(0, *bob);
 
 	std::cout << CYAN << "\n=== Testing unequip ===" << RST << std::endl;
-	// save the unequipped Materia to delete it later
 	jade->unequip(1);
 
-	jade->use(1, *bob); // nothing happens
+	jade->use(1, *bob);
 
 	std::cout << CYAN << "\n=== Testing deep copy of Character ===" << RST << std::endl;
 	Character copyMe(*jade);
 	copyMe.use(0, *bob);
-	copyMe.use(1, *bob); // empty slot, nothing happens
+	copyMe.use(1, *bob);
 
 	std::cout << CYAN << "\n=== Cleaning up ===" << RST << std::endl;
 	delete bob;

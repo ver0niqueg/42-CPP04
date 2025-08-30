@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 20:32:40 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/30 13:55:41 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/30 18:05:10 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,11 @@ Character &Character::operator=(Character const &other)
 	if (this != &other)
 	{
 		_name = other._name;
-		// liberer l'ancien inventaire
 		for (int i = 0; i < 4; i++)
 		{
 			delete _inventory[i];
 			_inventory[i] = NULL;
-			// on peut delete car c'est un tableau de pointeur
 		}
-		// deep copy de the other inventaire
 		for (int i = 0; i < 4; i++)
 		{
 			if (other._inventory[i])
@@ -55,7 +52,6 @@ Character &Character::operator=(Character const &other)
 			else
 				_inventory[i] = NULL;
 		}
-		// vider ancienne trash
 		for (int i = 0; i < _trashCount; i++)
 			delete _trash[i];
 		_trashCount = 0;
@@ -88,7 +84,7 @@ void Character::equip(AMateria* m)
 	{
 		if (_inventory[i] == NULL)
 		{
-			_inventory[i] = m; // clone pour que le Character ait sa propre copie
+			_inventory[i] = m;
 			std::cout << _name << " equipped " << _inventory[i]->getType()
 					  << " in slot " << i << std::endl;
 			return;
@@ -103,8 +99,8 @@ void Character::unequip(int idx)
 	{
 		std::cout << _name << " unequipped " << _inventory[idx]->getType()
 				  << " from slot " << idx << "!" << std::endl;
-		_trash[_trashCount++] = _inventory[idx];  // garder la materia en mémoire
-		_inventory[idx] = NULL; // objet toujours vivant pour éviter invalid read
+		_trash[_trashCount++] = _inventory[idx];
+		_inventory[idx] = NULL;
 	}
 }
 
