@@ -1,5 +1,5 @@
 # Program name
-NAME = Material
+NAME = Materia
 
 # Compiler and flags
 CC = c++

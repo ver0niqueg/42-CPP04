@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 21:55:53 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/27 15:45:23 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/30 15:11:49 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 
 int main()
 {
-	// test le polymorphisme grace a virtual ~Animal() et makeSound()
 std::cout << CYAN << "=== Correct Animals ===" << RST << std::endl;
 const Animal* meta = new Animal();
 const Animal* j = new Dog();
@@ -38,13 +37,11 @@ const WrongAnimal* wrongMeta = new WrongAnimal();
 const WrongAnimal* wrongCat = new WrongCat();
 
 std::cout << wrongCat->getType() << " " << std::endl;
-wrongCat->makeSound();  // wrong animal sound
-wrongMeta->makeSound(); // still wrong animal sound
+wrongCat->makeSound();
+wrongMeta->makeSound();
 
 delete wrongMeta;
-delete wrongCat; // le destructeur de WrongCat n'est pas appelé car WrongAnimal::~WrongAnimal() n'est pas virtual
-// mais pas de leak car pas d'allocation dynamique interne car type est detruit par WrongAnimal et WrongCat n'a pas d'autres allocations
-// il aurait fallu mettre virtual dans le destructeur de WrongAnimal
+delete wrongCat;
 
 return 0;
 }

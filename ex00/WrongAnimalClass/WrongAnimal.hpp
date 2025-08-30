@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 14:35:29 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/27 15:46:21 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/30 15:11:19 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ class WrongAnimal
 		WrongAnimal();
 		WrongAnimal(const WrongAnimal &copy);
 		WrongAnimal &operator=(const WrongAnimal &other);
-		~WrongAnimal(); // pas virtual
+		~WrongAnimal();
 
-		void            makeSound() const; // pas virtual
+		void            makeSound() const; 
 		std::string     getType() const;
 };
 
