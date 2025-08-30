@@ -15,7 +15,7 @@ BLUE   = \033[34m
 
 # Source files
 SRCS = main.cpp \
-		AnimalClass/Animal.cpp \
+		AAnimalClass/AAnimal.cpp \
 		DogClass/Dog.cpp \
 		CatClass/Cat.cpp \
 		BrainClass/Brain.cpp \

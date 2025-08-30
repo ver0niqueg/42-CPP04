@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 21:49:11 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/28 14:51:26 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/30 17:11:43 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,14 +51,7 @@ void Cat::makeSound() const
 	std::cout << "* Meowww ! Moewww ! *" << std::endl;    
 }
 
-void Cat::setIdea(int index, const std::string &idea) {
-    if (brain)
-        brain->setIdea(index, idea);
-}
-
-const std::string &Cat::getIdea(int index) const {
-    if (brain)
-        return brain->getIdea(index);
-    static std::string empty = "";
-    return empty;
+Brain *Cat::getBrain() const
+{
+	return (brain);
 }
