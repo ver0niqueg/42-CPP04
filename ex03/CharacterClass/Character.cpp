@@ -6,20 +6,22 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 20:32:40 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/29 16:50:50 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/30 12:18:42 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
 
-Character::Character(std::string const &name) : _name(name)
+Character::Character(std::string const &name) : _name(name), _trashCount(0)
 {
     std::cout << _name << " enters the battlefield!" << std::endl;
     for (int i = 0; i < 4; i++)
         _inventory[i] = NULL;
+    for (int i = 0; i < 50; i++)
+        _trash[i] = NULL;
 }
 
-Character::Character(const Character &copy) : _name(copy._name)
+Character::Character(const Character &copy) : _name(copy._name), _trashCount(0)
 {
     std::cout << "A copy of " << _name << " has been created !" << std::endl;
     for (int i = 0; i < 4; i++)
@@ -28,6 +30,8 @@ Character::Character(const Character &copy) : _name(copy._name)
             _inventory[i] = copy._inventory[i]->clone();
         else
             _inventory[i] = NULL;
+        for (int i = 0; i < 50; i++)
+        _trash[i] = NULL;
     }
 }
 
@@ -51,6 +55,10 @@ Character &Character::operator=(Character const &other)
             else
                 _inventory[i] = NULL;
         }
+        // vider ancienne trash
+        for (int i = 0; i < _trashCount; i++)
+            delete _trash[i];
+        _trashCount = 0;
     }
     return (*this);
 }
@@ -63,6 +71,8 @@ Character::~Character()
         delete _inventory[i];
         _inventory[i] = NULL;
     }
+    for (int i = 0; i < _trashCount; i++)
+        delete _trash[i];
 }
 
 std::string const & Character::getName() const
@@ -78,7 +88,7 @@ void Character::equip(AMateria* m)
     {
         if (_inventory[i] == NULL)
         {
-            _inventory[i] = m->clone(); // clone pour que le Character ait sa propre copie
+            _inventory[i] = m; // clone pour que le Character ait sa propre copie
             std::cout << _name << " equipped " << _inventory[i]->getType()
                       << " in slot " << i << std::endl;
             return;
@@ -93,6 +103,7 @@ void Character::unequip(int idx)
     {
         std::cout << _name << " unequipped " << _inventory[idx]->getType()
                   << " from slot " << idx << "!" << std::endl;
+        _trash[_trashCount++] = _inventory[idx];  // garder la materia en mémoire
         _inventory[idx] = NULL; // objet toujours vivant pour éviter invalid read
     }
 }
