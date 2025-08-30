@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 21:35:52 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/27 19:44:15 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/30 16:02:40 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@
 Dog::Dog() : Animal()
 {
 	type = "Dog";
-	brain = new Brain(); // allouer Brain
+	brain = new Brain();
 	std::cout << "A dog just appeared !" << std::endl;
 }
 
 Dog::Dog(const Dog &copy) : Animal(copy)
 {
 	type = copy.type;
-	brain = new Brain(*copy.brain); // deep copy
+	brain = new Brain(*copy.brain);
 	std::cout << "A twin of the dog just appeared !" << std::endl;
 }
 
@@ -51,14 +51,7 @@ void Dog::makeSound() const
 	std::cout << "* Wooooof ! Wooooof ! *" << std::endl;    
 }
 
-void Dog::setIdea(int index, const std::string &idea) {
-    if (brain)
-        brain->setIdea(index, idea);
-}
-
-const std::string &Dog::getIdea(int index) const {
-    if (brain)
-        return brain->getIdea(index);
-    static std::string empty = "";
-    return empty;
+Brain *Dog::getBrain() const
+{
+	return (brain);
 }

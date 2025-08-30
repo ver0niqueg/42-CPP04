@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 21:18:53 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/27 19:43:27 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/30 15:17:35 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,10 @@ class Dog : public Animal
 		Dog();
 		Dog(const Dog &copy);
 		Dog &operator=(const Dog &other);
-		virtual ~Dog(); // virtual added
+		~Dog();
 
-		virtual void makeSound() const; // virtual added
-		void setIdea(int index, const std::string &idea);
-        const std::string &getIdea(int index) const;
+		void makeSound() const;
+		Brain *getBrain( void ) const;
 };
 
 #endif

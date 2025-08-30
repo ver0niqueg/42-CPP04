@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 21:32:25 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/27 16:33:30 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/30 15:17:49 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,10 @@ class Cat : public Animal
 		Cat();
 		Cat(const Cat &copy);
 		Cat &operator=(const Cat &other);
-		virtual ~Cat(); // virtual added
+		~Cat();
 
-		virtual void makeSound() const; // virtual added
-		void setIdea(int index, const std::string &idea);
-        const std::string &getIdea(int index) const;
+		void makeSound() const;
+		Brain *getBrain( void ) const;
 };
 
 #endif

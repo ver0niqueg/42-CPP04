@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 16:06:57 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/28 13:58:17 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/30 15:10:55 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,16 +31,3 @@ class Brain
 };
 
 #endif
-
-/*
-✨ Détails importants
-- Attribut Brain* brain
-- Alloué dans le constructeur (new Brain())
-- Libéré dans le destructeur (delete brain)
-- Constructeur de copie et opérateur=
-- Deep copy : alloue un nouveau Brain et copie toutes les idées de l’autre objet.
-- Méthodes setIdea / getIdea
-Pour accéder aux idées depuis Cat ou Dog.
-- Polymorphisme
-makeSound() est virtual → fonctionne via Animal*.
-*/
