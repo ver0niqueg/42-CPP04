@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 17:06:31 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/29 15:04:50 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/30 13:55:52 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@
 
 class Cure : public AMateria
 {
-    public:
-        Cure();
-        Cure(const Cure &copy);
-        Cure &operator=(const Cure &other);
-        ~Cure();
+	public:
+		Cure();
+		Cure(const Cure &copy);
+		Cure &operator=(const Cure &other);
+		~Cure();
 
-        virtual AMateria* clone() const ;
-        virtual void use(ICharacter &target);
+		virtual AMateria* clone() const ;
+		virtual void use(ICharacter &target);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 14:08:21 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/29 14:34:32 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/30 13:55:39 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,17 @@ creer de nouvelles via clone() */
 
 class MateriaSource : public IMateriaSource
 {
-    private:
-        AMateria* _storage[4];
+	private:
+		AMateria* _storage[4];
 
-    public:
-        MateriaSource();
-        MateriaSource(const MateriaSource &copy);
-        MateriaSource &operator=(const MateriaSource &other);
-        ~MateriaSource();
+	public:
+		MateriaSource();
+		MateriaSource(const MateriaSource &copy);
+		MateriaSource &operator=(const MateriaSource &other);
+		~MateriaSource();
 
-        void learnMateria(AMateria *m);
-        AMateria* createMateria(std::string const &type);
+		void learnMateria(AMateria *m);
+		AMateria* createMateria(std::string const &type);
 };
 
 #endif
