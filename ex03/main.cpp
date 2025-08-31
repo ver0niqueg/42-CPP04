@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 14:53:12 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/30 18:06:28 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/31 13:48:32 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,19 +49,19 @@ int main()
 	std::cout << CYAN << "\n=== Using Materias ===" << RST << std::endl;
 	jade->use(0, *bob);
 	jade->use(1, *bob);
-	jade->use(2, *bob);
 
 	alice->use(0, *bob);
 
 	std::cout << CYAN << "\n=== Testing unequip ===" << RST << std::endl;
 	jade->unequip(1);
 
+	jade->use(0, *bob);
 	jade->use(1, *bob);
 
 	std::cout << CYAN << "\n=== Testing deep copy of Character ===" << RST << std::endl;
-	Character copyMe(*jade);
-	copyMe.use(0, *bob);
-	copyMe.use(1, *bob);
+	Character copyJade(*jade);
+	copyJade.use(0, *bob);
+	copyJade.use(1, *bob);
 
 	std::cout << CYAN << "\n=== Cleaning up ===" << RST << std::endl;
 	delete bob;
