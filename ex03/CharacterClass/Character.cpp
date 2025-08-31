@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 20:32:40 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/30 18:05:10 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/31 13:38:37 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Character::Character(const Character &copy) : _name(copy._name), _trashCount(0)
 		else
 			_inventory[i] = NULL;
 		for (int i = 0; i < 50; i++)
-		_trash[i] = NULL;
+			_trash[i] = NULL;
 	}
 }
 
@@ -55,6 +55,9 @@ Character &Character::operator=(Character const &other)
 		for (int i = 0; i < _trashCount; i++)
 			delete _trash[i];
 		_trashCount = 0;
+		
+		for (int i = 0; i < 50; i++)
+            _trash[i] = NULL;
 	}
 	return (*this);
 }
