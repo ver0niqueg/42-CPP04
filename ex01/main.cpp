@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 17:09:57 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/30 18:07:42 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/01 23:35:40 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,19 +79,6 @@ int main()
     std::cout << "cat1 idea[0]: " << cat1->getBrain()->getIdea(0) << std::endl;
     std::cout << "cat2 idea[0]: " << cat2.getBrain()->getIdea(0) << std::endl;
     delete cat1;
-
-	std::cout << CYAN << "\n=== Test shallow vs deep copy ===" << RST << std::endl;
-
-    Dog basic;
-    basic.getBrain()->setIdea(0, "Eat bones");
-
-    Dog tmp = basic;
-    tmp.getBrain()->setIdea(0, "Chase cats");
-
-    std::cout << "tmp Brain idea[0]: " << tmp.getBrain()->getIdea(0) << std::endl;
-    std::cout << "basic Brain idea[0]: " << basic.getBrain()->getIdea(0) << std::endl;
-    std::cout << "basic Brain idea[0] after tmp destroyed: " 
-              << basic.getBrain()->getIdea(0) << std::endl;
 
     std::cout << CYAN << "\n=== Test deep copy with assignment operator ===" << RST << std::endl;
     Dog dog3;
