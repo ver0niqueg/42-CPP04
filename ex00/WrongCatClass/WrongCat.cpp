@@ -6,19 +6,19 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 14:47:53 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/30 14:35:37 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/01 23:09:52 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongCat.hpp"
 
-WrongCat::WrongCat()
+WrongCat::WrongCat() : WrongAnimal()
 {
 	type = "WrongCat";
 	std::cout << "A wrong cat just came out of nowhere !" << std::endl;
 }
 
-WrongCat::WrongCat(const WrongCat &copy)
+WrongCat::WrongCat(const WrongCat &copy) : WrongAnimal()
 {
 	type = copy.type;
 	std::cout << "Another exact same wrong cat appeared." << std::endl;
