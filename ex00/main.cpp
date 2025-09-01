@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 21:55:53 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/30 15:11:49 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/01 23:15:42 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,16 @@ std::cout << CYAN << "\n=== Wrong Animals ===" << RST << std::endl;
 const WrongAnimal* wrongMeta = new WrongAnimal();
 const WrongAnimal* wrongCat = new WrongCat();
 
+const WrongCat* wc = new WrongCat();
+
 std::cout << wrongCat->getType() << " " << std::endl;
 wrongCat->makeSound();
 wrongMeta->makeSound();
+wc->makeSound();
 
 delete wrongMeta;
 delete wrongCat;
+delete wc;
 
 return 0;
 }

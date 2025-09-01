@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 21:49:11 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/27 17:45:21 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/01 23:18:31 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,5 @@ Cat::~Cat()
 
 void Cat::makeSound() const
 {
-	std::cout << "* Meowww ! Moewww ! *" << std::endl;    
+	std::cout << type << " : * Meowww ! Moewww ! *" << std::endl;    
 }

@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 14:47:53 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/09/01 23:09:52 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/01 23:16:21 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,5 @@ WrongCat::~WrongCat()
 
 void WrongCat::makeSound() const 
 {
-	std::cout << type << "* Meuuuuuuuh * What?!" << std::endl;
+	std::cout << type << " : * Meuuuuuuuh * What?!" << std::endl;
 }

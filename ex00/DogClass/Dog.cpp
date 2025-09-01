@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 21:35:52 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/27 17:45:10 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/09/01 23:18:19 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,5 @@ Dog::~Dog()
 
 void Dog::makeSound() const
 {
-	std::cout << "* Wooooof ! Wooooof ! *" << std::endl;    
+	std::cout << type << " : * Wooooof ! Wooooof ! *" << std::endl;    
 }
